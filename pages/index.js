@@ -48,7 +48,9 @@ export default function Home() {
           <div>Metamask not Connected ,please connect your wallet</div>
         )}
       </div>
-      <div>{chainString == "80001" ? "Connected to Polygon Mumbai" : "Metamsk connected to different chain, Please  switch to<b>Polygon Mumbai</b> to test this"}</div>
+      <div className="flex justify-center mt-5 text-3xl">
+        {chainString == "80001" ? "Connected to Polygon Mumbai" : "Metamsk connected to different chain, Please  switch to Polygon Mumbai to test this"}
+      </div>
     </div>
   );
 }
