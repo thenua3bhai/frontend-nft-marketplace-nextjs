@@ -22,7 +22,8 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   const { chainId, isWeb3Enabled } = useMoralis();
   const chainString = chainId ? parseInt(chainId).toString() : null;
-  const marketplaceAddress = chainId ? networkMapping[chainString].NftMarketplace[0] : null;
+  //only polygon have listings,,crosschain listing show ie. marketplace on another chain but user is connected to diffrent chain they able to see all chain listings or at least 1 common place so we are putting only polygon mumbai here
+  const marketplaceAddress = chainId ? networkMapping["80001"].NftMarketplace[0] : null;
 
   const { loading, error, data: listedNfts } = useQuery(GET_ACTIVE_ITEMS);
   console.log(listedNfts);
