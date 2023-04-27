@@ -45,9 +45,10 @@ export default function Home() {
             })
           )
         ) : (
-          <div>Web3 Currently Not Enabled</div>
+          <div>Metamask not Connected ,please connect your wallet</div>
         )}
       </div>
+      <div>{chainId == "80001" ? "Connected to Polygon Mumbai" : "Metamsk connected to different chain, Please  switch to<b>Polygon Mumbai</b> to test this"}</div>
     </div>
   );
 }
